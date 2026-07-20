@@ -33,7 +33,7 @@ load_dotenv()
 # ---------------------------------------------------------------------------
 DATA_DIR = Path(__file__).parent.parent / "data"
 LEI_FILE = DATA_DIR / "lei_mrosc.docx"
-DECRETO_FILE = DATA_DIR / "decreto_57575_2016.pdf"
+DECRETO_FILE = DATA_DIR / "Decreto nº 57.5752016.docx"
 
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1000"))         # TODO(usuário): ajuste se necessário
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "150"))    # TODO(usuário): ajuste se necessário
@@ -263,15 +263,15 @@ def ingest_documents(
                 f"{', '.join(d.metadata['artigo'] for d in alterados)}"
             )
 
-    # --- Decreto Municipal 57.575/2016 (PDF) ---
+    # --- Decreto Municipal 57.575/2016 (DOCX) ---
     if not decreto_path.exists():
         print(f"\n⚠️  Arquivo do Decreto não encontrado: {decreto_path}")
         print(
-            "   Coloque 'decreto_57575_2016.pdf' na pasta 'data/' antes de rodar a ingestão."
+            "   Coloque 'Decreto nº 57.5752016.docx' na pasta 'data/' antes de rodar a ingestão."
         )
     else:
         print(f"\n📄 Carregando Decreto 57.575/2016: {decreto_path.name} ...")
-        decreto_text = load_pdf(decreto_path)
+        decreto_text = load_docx(decreto_path)
         decreto_docs = split_by_articles(
             full_text=decreto_text,
             fonte="Decreto 57.575/2016",
