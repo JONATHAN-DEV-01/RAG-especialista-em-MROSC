@@ -1,0 +1,16 @@
+[theme]
+# =====================================================================
+# Tema Streamlit — Inspirado na identidade visual da Prefeitura de SP
+#
+# TODO(usuário): confirmar hex oficial no manual de marca da PMSP
+# antes de publicar. O valor "#ED1C24" é uma aproximação visual
+# do vermelho institucional observado no cabeçalho do Decreto Municipal
+# (logotipo "PREFEITURA DE SÃO PAULO"), NÃO extraído de manual oficial.
+# Consulte o Manual de Aplicação da Marca da PMSP para o código
+# Pantone/RGB/hex correto antes de publicar ou apresentar oficialmente.
+# =====================================================================
+primaryColor = "#ED1C24"           # TODO(usuário): confirmar hex oficial no manual de marca da PMSP antes de publicar
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F2F2"
+textColor = "#1A1A1A"
+font = "sans serif"

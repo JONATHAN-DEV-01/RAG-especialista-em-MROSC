@@ -1,0 +1,39 @@
+# =====================================================================
+# RAG Jurídico MROSC — Dependências
+# Sistema 100% gratuito: embeddings locais + Chroma + Ollama
+# =====================================================================
+
+# --- LangChain core e integrações ---
+langchain>=0.3.0,<0.4.0
+langchain-community>=0.3.0,<0.4.0
+langchain-huggingface>=0.1.0,<0.2.0
+langchain-chroma>=0.2.0,<0.3.0
+langchain-ollama>=0.3.0,<0.4.0
+
+# --- Provedores de API opcionais (gratuitos, com chave) ---
+langchain-groq>=0.3.0,<0.4.0
+langchain-google-genai>=2.0.0,<3.0.0
+
+# --- Embeddings e modelos locais ---
+sentence-transformers>=3.0.0,<4.0.0
+# torch instalado automaticamente como dependência do sentence-transformers
+# Para usar somente CPU (economiza espaço), rode após instalar:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# --- Vector store ---
+chromadb>=0.6.0,<0.7.0
+
+# --- Carregamento de documentos ---
+python-docx>=1.1.0,<2.0.0
+pypdf>=4.3.0,<6.0.0
+
+# --- Interface Streamlit ---
+streamlit>=1.38.0,<2.0.0
+
+# --- Utilitários ---
+python-dotenv>=1.0.0,<2.0.0
+rich>=13.0.0,<14.0.0          # output bonito no terminal (CLI)
+tqdm>=4.66.0,<5.0.0           # barra de progresso na ingestão
+
+# --- Compatibilidade ---
+pydantic>=2.0.0,<3.0.0
